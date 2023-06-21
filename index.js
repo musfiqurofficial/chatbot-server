@@ -10,7 +10,10 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
+
+// Enable CORS
 app.use(cors());
+
 app.use(bodyParser.json());
 
 app.post("/chat", async (req, res) => {
